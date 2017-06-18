@@ -23,7 +23,8 @@ mongo_client.connect('mongodb://localhost:27017/zapiski', (err, db) => {
 	db.collection("Users").insertOne({
 		name: "Mik",
 		age: "27",
-		location: "Slovenia"
+		location: "Slovenia",
+		is_male: false
 	}, (err, result) => {
 		if(err){
 			return console.log("Unable to insert users!", err);
